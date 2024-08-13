@@ -2,6 +2,7 @@
   "name": "htmx-hardware-monitor-ws",
   "type": "module",
   "scripts": {
+    "build:script": "bun build ./assets/script/*.js --outdir ./.dist",
     "build:tailwind": "bunx tailwindcss -i ./assets/css/main.css -o ./.dist/tailwind_v4.css"
   },
   "devDependencies": {
