@@ -27,7 +27,6 @@ type (
 	}
 
 	Config struct {
-		Database *Database `mapstructure:"database" validate:"required"`
 		Server *Server   `mapstructure:"server" validate:"required"`
         AppInfo *AppInfo      `mapstructure:"appinfo" validate:"required"`
 	}
