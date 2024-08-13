@@ -1,0 +1,14 @@
+{
+  "name": "htmx-hardware-monitor-ws",
+  "type": "module",
+  "scripts": {
+    "build:tailwind": "bunx tailwindcss -i ./assets/css/main.css -o ./.dist/tailwind_v4.css"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tailwindcss": "^3.4.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
