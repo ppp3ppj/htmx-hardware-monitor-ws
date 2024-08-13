@@ -176,3 +176,7 @@ dist
 
 # bun build:tailwindcss
 .dist
+
+# env setup
+/config/config.yaml
+config.yaml

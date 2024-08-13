@@ -1,0 +1,12 @@
+appinfo:
+  name: htmx-hardware-monitor-ws
+  version: 0.0.1
+  environtment: development
+  secretkey: "secretkey"
+
+server:
+  port: 1323
+  allowOrigins:
+    - "*"
+  timeout: 30
+  bodyLimit: "1048576"
