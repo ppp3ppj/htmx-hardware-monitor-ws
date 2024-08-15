@@ -1,0 +1,23 @@
+package views
+
+import "github.com/ppp3ppj/htmx-hardware-monitor-ws/views/variables"
+
+templ Body(opts views_variables.BodyOpts) {
+<!DOCTYPE html>
+	<html lang="en">
+		<head hx-boost="true">
+			@Header()
+			for _ , head := range opts.ExtraHeaders {
+				@head
+			}
+			<title>pppfav.dev</title>
+		</head>
+		<body id="admin-root" class="bg-base-100 dark:bg-base-300">
+			<div class="relative flex flex-col justify-center overflow-hidden">
+				<div class="min-h-screen">
+					@opts.Component
+				</div>
+			</div>
+		</body>
+	</html>
+}
