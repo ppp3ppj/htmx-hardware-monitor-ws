@@ -14,6 +14,8 @@ import (
 	"github.com/labstack/gommon/log"
 	"github.com/ppp3ppj/htmx-hardware-monitor-ws/config"
 	"github.com/ppp3ppj/htmx-hardware-monitor-ws/internal/middlewares"
+	"github.com/ppp3ppj/htmx-hardware-monitor-ws/pkg/dashboard"
+	"github.com/ppp3ppj/htmx-hardware-monitor-ws/template"
 )
 
 type echoServer struct {
@@ -55,6 +57,12 @@ func (s * echoServer) Start() {
 
     // for health check
     s.app.GET("/v1/health", s.healthCheck)
+
+    // Register template templ
+    template.NewTemplateRenderer(s.app)
+
+    baseGroup := s.app.Group("")
+    dashboard.NewDashboardFrontend(baseGroup)
 
     // Graceful Shutdown
     quitCh := make(chan os.Signal, 1)
