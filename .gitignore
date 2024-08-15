@@ -180,3 +180,11 @@ dist
 # env setup
 /config/config.yaml
 config.yaml
+
+# Customs
+*.env*
+.air*
+/tmp
+*.pem
+apikey.txt
+*.txt
