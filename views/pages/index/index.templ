@@ -1,0 +1,15 @@
+package views_pages
+
+import "github.com/ppp3ppj/htmx-hardware-monitor-ws/views/variables"
+import "github.com/ppp3ppj/htmx-hardware-monitor-ws/views"
+
+templ Index(body views_variables.BodyOpts) {
+    @views.Body(views_variables.BodyOpts{
+        Component: index(),
+    })
+}
+templ index() {
+<div>
+    Hi
+</div>
+}
