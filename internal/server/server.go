@@ -52,7 +52,7 @@ func (s * echoServer) Start() {
     s.app.Use(timeOutMiddleware)
     s.app.Use(corsMiddleware)
 
-    s.app.Static("/dist", ".dist")
+    s.app.Static("/static", ".dist")
     s.app.Static("/assets", "assets")
 
     // for health check
