@@ -12,7 +12,7 @@ type SystemInfo struct {
     Os string
     Platform string
     Hostname string
-    NumberOfProcess string
+    NumberOfProcessRunning string
     TotalMem string
     FreeMem string
     PercentageUsedMem string
@@ -38,7 +38,7 @@ func GetSystemSection() (SystemInfo, error) {
         Os: runTimeOs,
         Platform: hostStat.Platform,
         Hostname: hostStat.Hostname,
-        NumberOfProcess: strconv.FormatUint(hostStat.Procs, 10),
+        NumberOfProcessRunning: strconv.FormatUint(hostStat.Procs, 10),
         TotalMem: strconv.FormatUint(vmStat.Total/megabyteDiv, 10),
         FreeMem: strconv.FormatUint(vmStat.Free/megabyteDiv, 10),
         PercentageUsedMem: strconv.FormatFloat(vmStat.UsedPercent, 'f', 2, 64),
